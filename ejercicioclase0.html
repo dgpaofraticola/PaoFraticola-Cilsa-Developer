@@ -1,0 +1,40 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name=" description" content= "formulario con validación, es responsive, modo claro y oscuro, agrego estilo y lo saco =P" >
+<meta name="author" content="D.G. Paola Fraticola">
+<title>Ejercicio Clase 0</title>
+<link rel="stylesheet" href="css/estilo.css">
+<div id="contenedor">
+  <h1>Formulario de Datos Personales</h1>
+  <form action="" name="datos-personales" method="get">
+    <label for="nombre">Nombre:</label>
+    <input type="text" placeholder="Ingrese su nombre" name="nombre" id="nombre" required=""> 
+    <br>
+    <br>
+    <label for="nombre">Apellido:</label>
+    <input type="text" placeholder="Ingrese su apellido" name="apellido" id="apellido" required="">
+    <br>
+    <br>
+    <label for="email">Email:</label>
+    <input type="email" placeholder="Ingrese su email" name="email" id="email" required="">
+    <br>
+    <small id="emailHelp" style="color: red; display: none;">Por favor, ingrese un email válido.</small>
+    <br>
+    <br>
+    <label for="nacimiento">Fecha de Nacimiento:</label>
+    <input type="date" required="">
+    <br>
+    <br>
+    <label for="residencia">País de Residencia:</label>
+    <select id="pais" name="pais" required="">
+      <option value="">Seleccione un país</option>
+    </select>
+    <br>
+    <br>
+    <input type="submit" value="Enviar">
+    <br>
+    <input type="submit" value="Estilo 1" id="estilo1" required="">
+    <input type="submit" value="Modo Oscuro" id="estiloAltoContraste" required="">
+  </form>
+</div>
+<script defer="" src="js/main.js"></script>
