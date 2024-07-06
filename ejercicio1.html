@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio Clase 0</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+
+<body>
+
+    <div id="contenedor">
+        <h1>Formulario de Datos Personales</h1>
+
+        <form action="" name="datos-personales" method="get">
+            <label for="nombre">Nombre: </label><input type="text" placeholder="Ingrese su nombre" name="nombre"
+                id="nombre" required> <br><br>
+            <label for="nombre">Apellido: </label><input type="text" placeholder="Ingrese su apellido" name="apellido"
+                id="apellido" required><br><br>
+                <label for="email">Email:</label>
+                <input type="email" placeholder="Ingrese su email" name="email" id="email" required><br>
+                <small id="emailHelp" style="color: red; display: none;">Por favor, ingrese un email válido.</small><br><br>
+                
+            <label for="nacimiento">Fecha de Nacimiento: </label><input type="date" required><br><br>
+            <label for="residencia">País de Residencia: </label><input type="text" required><br><br>
+            <input type="submit" value="Enviar" ><br>
+            <input type="submit" value="Estilo 1" id="estilo1" required>
+            <input type="submit" value="Modo Oscuro" id="estiloAltoContraste" required>
+        </form>
+    </div>
+    <script defer src="js/main.js"></script>
+</body>
+
+</html>
