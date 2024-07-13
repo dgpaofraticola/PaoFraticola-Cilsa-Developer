@@ -1,3 +1,4 @@
+//Comienzo a declarar y crear estilo 1 y modo original.
 document.addEventListener("DOMContentLoaded", function () {
     const estilo1Btn = document.getElementById("estilo1");
     const estiloAltoContrasteBtn = document.getElementById("estiloAltoContraste");
@@ -12,12 +13,12 @@ document.addEventListener("DOMContentLoaded", function () {
                 document.body.style.backgroundColor = "#000000"; // Fondo negro
                 document.body.style.color = "#ffffff"; // Texto blanco
                 document.body.style.fontFamily = "'Courier New', monospace"; // Tipografía Courier New
-                contenedor.classList.remove("borde-punteado-blanco");
+                contenedor.classList.remove("borde-punteado-blanco");//saco el borde al volver al modo original.
             } else {
                 document.body.style.backgroundColor = ""; // Fondo original
                 document.body.style.color = ""; // Texto original
                 document.body.style.fontFamily = ""; // Tipografía original
-                contenedor.classList.remove("borde-punteado");
+                contenedor.classList.remove("borde-punteado"); //saco el borde al volver al modo original.
             }
             estilo1Btn.value = "Estilo 1"; // Cambia el texto del botón de nuevo a "Estilo 1"
         } else {
@@ -26,12 +27,12 @@ document.addEventListener("DOMContentLoaded", function () {
                 document.body.style.backgroundColor = "#000000"; // Fondo negro
                 document.body.style.color = "#ffffff"; // Texto blanco
                 document.body.style.fontFamily = "'Arial', sans-serif"; // Cambia la tipografía a Arial
-                contenedor.classList.add("borde-punteado-blanco"); // Borde blanco
+                contenedor.classList.add("borde-punteado-blanco"); // Borde blanco, lo agrego.
             } else {
                 document.body.style.backgroundColor = "#add8e6"; // Fondo azul claro
                 document.body.style.fontFamily = "'Arial', sans-serif"; // Cambia la tipografía a Arial
                 document.body.style.color = ""; // Resetea color del texto (por si acaso)
-                contenedor.classList.add("borde-punteado"); // Borde negro
+                contenedor.classList.add("borde-punteado"); // Borde negro, lo agrego
             }
             estilo1Btn.value = "Modo Original"; // Cambia el texto del botón a "Modo Original"
         }
@@ -106,3 +107,28 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
+// llamo a una api que encontré de países para el select del formulario.
+document.addEventListener('DOMContentLoaded', function() {
+    const paisSelect = document.getElementById('pais'); // Obtén el elemento <select> donde se mostrarán los países
+  
+    // Realiza una solicitud a la API para obtener los datos de los países
+    fetch('https://restcountries.com/v3.1/all')
+      .then(response => response.json()) // Convierte la respuesta en JSON
+      .then(data => {
+        // Extrae los nombres de los países y ordénalos alfabéticamente
+        const countries = data.map(country => country.name.common).sort();
+  
+        // Recorre la lista de países ordenada y crea un <option> para cada uno
+        countries.forEach(country => {
+          const option = document.createElement('option'); // Crea un nuevo elemento <option>
+          option.value = country; // Establece el valor del <option>
+          option.textContent = country; // Establece el texto del <option>
+          paisSelect.appendChild(option); // Agrega el <option> al <select>
+        });
+      })
+      .catch(error => {
+        console.error('Error fetching the countries:', error); // Manejo de errores en caso de que falle la solicitud
+      });
+  });
+  
+  
