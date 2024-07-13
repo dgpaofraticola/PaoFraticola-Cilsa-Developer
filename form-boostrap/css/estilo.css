@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    /* Alinea el contenido al inicio del contenedor verticalmente */
+    min-height: 100vh;
+    padding-top: 100px;
+    /* Añade un padding superior de 100px */
+    box-sizing: border-box;
+    /* Asegúrate de que el padding no afecte el tamaño total */
+}
+
+h1 {
+
+    font-size: 28px;
+}
+
+
+
+div {
+    width: 80%;
+    /* Ajusta el ancho para pantallas más pequeñas */
+    text-align: left;
+    padding: 10px;
+    height: auto;
+    /* Permite que la altura se ajuste automáticamente */
+}
+
+.borde-punteado {
+    border: 1px dashed black;
+}
+
+.borde-punteado-blanco {
+    border: 1px dashed white;
+}
+
+
+form {
+    margin: 10px;
+}
+
+
+
+/* Estilos para tablets */
+@media (min-width: 600px) and (max-width: 768px) {
+    div {
+        width: 70%;
+        /* Ajusta el ancho para tablets */
+    }
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 599px) {
+    div {
+        width: 90%;
+        /* Ajusta el ancho para móviles */
+    }
+
+    label,
+    input,
+    select {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+        /* Añade espacio entre los elementos */
+    }
+
+    input[type="submit"] {
+        width: 100%;
+        margin-top: 10px;
+        /* Añade espacio encima de los botones */
+    }
+}
