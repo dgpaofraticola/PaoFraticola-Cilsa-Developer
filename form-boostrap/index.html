@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="formulario con validación, es responsive, modo claro y oscuro, agrego estilo y lo saco =P">
+  <meta name="author" content="D.G. Paola Fraticola">
+  
+  <title>Ejercitemos bootstrap</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="icon" href="https://dcdn.mitiendanube.com/stores/001/141/982/themes/common/logo-2099702169-1596997649-6a71730de149b6f8509a1cbf150efcc81596997649.ico?0" sizes="16x16 32x32 48x48" type="image/png">
+
+  <style>
+    .custom-container {
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .carousel-item img {
+      max-height: 800px; /* Ajusta la altura máxima de las imágenes */
+      width: 100%; /* Asegura que las imágenes ocupen el ancho completo del carousel */
+      object-fit: cover; /* Ajusta la forma en que las imágenes se ajustan dentro de su contenedor */
+    }
+  </style>
+</head>
+
+<body class="d-flex justify-content-center align-items-center vh-40">
+
+  <div id="contenedor" class="d-flex flex-column custom-container">
+
+    <div class="container">
+
+      <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active" style="max-height:150px;">
+            <img src="https://cdn.pixabay.com/photo/2024/05/30/03/21/backgrounds-8797661_1280.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item" style="max-height:150px;">
+            <img src="https://cdn.pixabay.com/photo/2024/06/14/14/06/ai-generated-8829924_1280.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item" style="max-height:150px;">
+            <img src="https://cdn.pixabay.com/photo/2024/06/13/19/02/abstract-8828253_1280.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      <h1 class="mt-4 mb-4">Formulario de Datos Personales</h1>
+      <form action="" name="datos-personales" method="get">
+        <div class="mb-3">
+          <label for="nombre" class="form-label"><i class="bi bi-person-badge"></i> Nombre:</label>
+          <input type="text" class="form-control" placeholder="Ingrese su nombre" name="nombre" id="nombre" required>
+          <small id="nombreError" class="form-text text-danger d-none">El nombre no puede contener números.</small>
+        </div>
+        <div class="mb-3">
+          <label for="apellido" class="form-label"><i class="bi bi-person-badge-fill"></i> Apellido:</label>
+          <input type="text" class="form-control" placeholder="Ingrese su apellido" name="apellido" id="apellido"
+            required>
+          <small id="apellidoError" class="form-text text-danger d-none">El apellido no puede contener números.</small>
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label"><i class="bi bi-mailbox-flag"></i> Email:</label>
+          <input type="email" class="form-control" placeholder="Ingrese su email" name="email" id="email" required>
+          <small id="emailHelp" class="form-text text-danger d-none">Por favor, ingrese un email válido.</small>
+        </div>
+        <div class="mb-3">
+          <label for="nacimiento" class="form-label"><i class="bi bi-calendar-heart"></i> Fecha de Nacimiento:</label>
+          <input type="date" class="form-control" required>
+        </div>
+        <div class="mb-3">
+          <label for="residencia" class="form-label"><i class="bi bi-pin-map"></i> País de Residencia:</label>
+          <select id="pais" name="pais" class="form-select" required>
+            <option value="">Seleccione un país</option>
+          </select>
+        </div>
+        <div class="btn-group" role="group" aria-label="Botonera principal del formulario">
+          <input type="submit" class="btn btn-danger" value="Enviar">
+          <input type="button" class="btn btn-info" value="Estilo 1" id="estilo1">
+          <input type="button" class="btn btn-warning" value="Modo Oscuro" id="estiloAltoContraste">
+        </div>
+      </form>
+    </div>
+    <footer class="bg-light text-black text-center py-3 mt-1 rounded">
+      <div class="container">
+          <div class="row">
+              <div class="col">
+                  <p class="mb-0">Desarrollado por PaoFraticola</p>
+              </div>
+          </div>
+      </div>
+  </footer>
+  </div>
+
+
+
+  <script defer src="js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>
